@@ -1,0 +1,8 @@
+package org.fkit.test;
+
+import org.fkit.dao.UserDao;
+import org.fkit.util.SqlFkSessionFactory;
+
+public class UserDaoTest {
+	UserDao ud = SqlFkSessionFactory.getSqlSession().getMapper(UserDao.class);
+}

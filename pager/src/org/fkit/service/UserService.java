@@ -1,0 +1,29 @@
+package org.fkit.service;
+
+import java.util.List;
+
+import org.fkit.dao.UserDao;
+import org.fkit.domain.PageBean;
+import org.fkit.domain.User;
+import org.fkit.util.SqlFkSessionFactory;
+
+public class UserService {
+	UserDao ud = SqlFkSessionFactory.getSqlSession().getMapper(UserDao.class);
+	public PageBean<User> findAllUserWithPage(int pageNum,int pageSize) {
+		//在这里要将PageBean中的数据创建好，然后将对象传回去
+		//先要从数据库中获取所有用户的数据量有多少，获得totalRecord。
+		List<User> allUser = ud.findAllUser();
+		int totalRecord = allUser.size();
+		
+		//有了三个初始数据，就能创建pageBean对象了
+		PageBean pb = new PageBean(pageNum,pageSize,totalRecord);
+		
+		//获取PageBean对象中的startIndex
+		int startIndex = pb.getStartIndex();
+		
+		//有了startIndex和pageSize,就可以拿到每页的数据了
+		pb.setList(ud.findAll(startIndex,pageSize));
+		
+		return pb;
+	}
+}

@@ -1,0 +1,5 @@
+package org.fkit.dao;
+
+public interface UserDao {
+
+}

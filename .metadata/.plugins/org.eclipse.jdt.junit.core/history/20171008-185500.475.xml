@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserDaoTest.fun" project="pager" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testcase name="fun" classname="org.fkit.test.UserDaoTest" time="0.018">
+    <error>org.apache.ibatis.exceptions.PersistenceException: &#13;
+### Error building SqlSession.&#13;
+### The error may exist in SQL Mapper Configuration&#13;
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.logging.LogException: Error setting Log implementation.  Cause: java.lang.NoClassDefFoundError: org/apache/log4j/Priority&#13;
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)&#13;
+	at org.fkit.util.SqlFkSessionFactory.getSqlSession(SqlFkSessionFactory.java:18)&#13;
+	at org.fkit.test.UserDaoTest.&lt;init&gt;(UserDaoTest.java:11)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:217)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:266)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:263)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.logging.LogException: Error setting Log implementation.  Cause: java.lang.NoClassDefFoundError: org/apache/log4j/Priority&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:98)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)&#13;
+	... 25 more&#13;
+Caused by: org.apache.ibatis.logging.LogException: Error setting Log implementation.  Cause: java.lang.NoClassDefFoundError: org/apache/log4j/Priority&#13;
+	at org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:139)&#13;
+	at org.apache.ibatis.logging.LogFactory.useCustomLogging(LogFactory.java:89)&#13;
+	at org.apache.ibatis.session.Configuration.setLogImpl(Configuration.java:221)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.settingsElement(XMLConfigBuilder.java:262)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:113)&#13;
+	... 27 more&#13;
+Caused by: java.lang.NoClassDefFoundError: org/apache/log4j/Priority&#13;
+	at java.lang.Class.getDeclaredConstructors0(Native Method)&#13;
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)&#13;
+	at java.lang.Class.getConstructor0(Class.java:3075)&#13;
+	at java.lang.Class.getConstructor(Class.java:1825)&#13;
+	at org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:132)&#13;
+	... 31 more&#13;
+Caused by: java.lang.ClassNotFoundException: org.apache.log4j.Priority&#13;
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)&#13;
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)&#13;
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)&#13;
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)&#13;
+	... 36 more&#13;
+&#13;
+</error>
+  </testcase>
+</testrun>
